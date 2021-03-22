@@ -1,0 +1,65 @@
+html {
+  font-size: calc(1em + 0.1vw);
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  color: #131415;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  color: #131415;
+}
+
+h2 {
+  font-size: calc(0.9em + 1vw);
+}
+
+.metarussia {
+  padding: 25px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.head {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: calc(1.75em + 1vw);
+}
+
+.first-draft {
+  font-size: calc(0.9em + 1vw);
+  padding-top: 15px;
+}
+
+.instance {
+  font-size: calc(0.5em + 1vw);
+  padding-top: 5px;
+}
+
+.index__content {
+  line-height: 1.4em;
+}
+
+.index__content span {
+  display: block;
+}
+
+.text {
+  padding-top: 50px;
+}
+
+.text div {
+  padding-bottom: 50px;
+}
