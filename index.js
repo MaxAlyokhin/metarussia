@@ -1,8 +1,11 @@
+// Run - nodemon index
+
 // Express раздаёт статику, которая догружает из index.html стили и getConstitution.js
 // Этот скрипт делает get-запрос по адресу /generate
 // Express в ответ генерирует уникальный экземпляр Конституции из объекта metarussia.js
 
 const fs = require('fs')
+// const pdf = require('html-pdf')
 const express = require('express')
 
 const server = express()
@@ -77,10 +80,10 @@ server.get('/generate', (request, responce) => {
 
     // Конкатенируем все элементы массива в строки
     for (let i = 0; i < indexArrayRandom.length; i++) {
-      indexContent += `<span><a href="#${i}">${indexArrayRandom[i]}</a></span>`
-    }
-    for (let i = 0; i < fragmentsArrayRandom.length; i++) {
-      fragments += `<div class="fragment"><a name="${i}">${fragmentsArrayRandom[i]}</a></div>`
+      indexContent += `<span><a href="#${indexArrayRandom[i]}">${indexArrayRandom[i]}</a></span>`
+      // }
+      // for (let i = 0; i < fragmentsArrayRandom.length; i++) {
+      fragments += `<div class="fragment"><a name="${indexArrayRandom[i]}">${fragmentsArrayRandom[i]}</a></div>`
     }
 
     // Формируем экземпляр Конституции из отдельных частей
@@ -99,6 +102,7 @@ server.get('/generate', (request, responce) => {
 
     responce.status(200).type('text/html')
     responce.send(`${book}`)
+    // responce.sendFile('a.html')
   })
 })
 
